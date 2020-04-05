@@ -15,8 +15,8 @@ class Pokemon
   
   def self.find(id,db)
     np = db.execute("SELECT * FROM pokemon WHERE id = ?", [id])[0]
-    binding.pry 
-    self.new(np)
+    hash = {:id => np[0],:name => np[1],:type => np[2],:db => db}
+    self.new(hash)
   end
   
 end
