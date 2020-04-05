@@ -3,7 +3,6 @@ class Pokemon
   attr_reader :id,:db
   
   def initialize(pokehash)
-    #binding.pry
     @id = pokehash[:id]
     @name = pokehash[:name]
     @type = pokehash[:type]
